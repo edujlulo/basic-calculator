@@ -10,13 +10,14 @@ body {
   /* justify-content: center; */
   align-items: center;
   flex-direction: column;
-  background-color: rgb(176, 230, 230);
+  background-color: #66d9ff;
 }
 
 .title {
-  color: rgb(9, 9, 179);
+  color: #0000b3;
   margin-bottom: 100px;
   margin-top: 80px;
+  font-weight: 800;
 }
 
 .all-buttons {
@@ -24,25 +25,26 @@ body {
   grid-template-columns: repeat(4, 80px);
   grid-gap: 10px;
   padding: 30px;
-  background-color: rgb(253, 107, 53);
+  background-color: #e63900;
+  border-radius: 15px;
 }
 
 .button {
   padding: 20px;
   font-size: 30px;
   cursor: pointer;
-  background-color: rgb(128, 124, 124);
+  background-color: #879292;
 }
 
 .button-equal {
-  background-color: rgb(226, 73, 73);
+  background-color: #f4c025;
 }
 
 .button-division,
 .button-x,
 .button--,
 .button-plus {
-  background-color: rgb(60, 91, 231);
+  background-color: #0066ff;
 }
 
 .screen {
