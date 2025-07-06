@@ -49,7 +49,9 @@ body {
 .button-division,
 .button-x,
 .button--,
-.button-plus {
+.button-plus,
+.button-par-open,
+.button-par-close {
   background-color: #0066ff;
 }
 
@@ -66,4 +68,9 @@ body {
 .button.activo {
   transform: scale(0.95);
   box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.button-delete,
+.button-AC {
+  background-color: #fd1e00;
 }
