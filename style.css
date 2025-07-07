@@ -1,5 +1,6 @@
 * {
   font-family: sans-serif;
+  color: #0c0d0d;
 }
 
 body {
@@ -39,7 +40,7 @@ body {
   padding: 20px;
   font-size: 30px;
   cursor: pointer;
-  background-color: #879292;
+  background-color: #a1a9aa;
 }
 
 .button-equal {
@@ -73,4 +74,9 @@ body {
 .button-delete,
 .button-AC {
   background-color: #fd1e00;
+}
+
+.button-division {
+  font-size: 40px;
+  padding: 0;
 }
