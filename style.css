@@ -31,7 +31,7 @@ body {
   grid-template-columns: repeat(4, 80px);
   grid-gap: 10px;
   padding: 30px;
-  background-color: #e63900;
+  background-color: #b16218;
   border-radius: 15px;
   box-shadow: 4px 4px 6px rgb(0, 0, 0, 0.5);
 }
