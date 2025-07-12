@@ -12,7 +12,7 @@ buttons.forEach(function (butt) {
 
       if (resultShown) {
         // Clean input if just was shown a result and is not a symbol
-        if (!isNaN(t) || t === ".") {
+        if (!isNaN(t) || t === "." || t === "(" || t === ")") {
           input.value = "";
         }
         resultShown = false;
@@ -64,6 +64,8 @@ function calculation(e) {
     "/",
     "*",
     ".",
+    "(",
+    ")",
   ];
 
   if (validKeys.includes(e.key)) {
