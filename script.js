@@ -83,55 +83,6 @@ function calculation(e) {
   }
 }
 
-const input2 = [
-  { product: "Laptop", price: 1200, units: 2 },
-  { product: "Smartphone", price: 600, units: 1 },
-  { product: "Laptop", price: 1000, units: 1 },
-  { product: "Tablet", price: 800, units: 2 },
-  { product: "Laptop", price: 1500, units: 2 },
-  { product: "Smartphone", price: 500, units: 3 },
-];
+const fruits = new Set(["Apple", "Banana", "Mango"]);
 
-let newArr = [];
-let newObj = {};
-let byProduct = {};
-
-for (let producto of input2) {
-  if (!newArr.includes(producto.product)) {
-    newArr.push(producto.product);
-  }
-}
-
-for (let producto of newArr) {
-  let totalPricePerProduct = 0;
-  for (let producto2 of input2) {
-    if (producto2.product === producto) {
-      totalPricePerProduct += producto2.price * producto2.units;
-    }
-  }
-  byProduct[producto] = totalPricePerProduct;
-}
-
-function sumarPrecios() {}
-
-let totalProductsPrice = 0;
-
-for (let i = 0; i < input2.length; i++) {
-  totalProductsPrice += input2[i].price * input2[i].units;
-}
-
-let resultado = {};
-
-resultado["totalProductsPrice"] = totalProductsPrice;
-resultado["byProduct"] = byProduct;
-
-console.log(resultado);
-
-// {
-// totalProductsPrice: 10100,
-// byProduct: {
-// Laptop: 5400,
-// Smartphone: 2100,
-// Tablet: 1600
-// }
-// }
+console.log(fruits);
