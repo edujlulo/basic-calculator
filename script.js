@@ -82,7 +82,3 @@ function calculation(e) {
     document.querySelector(".button-equal").click();
   }
 }
-
-const fruits = new Set(["Apple", "Banana", "Mango"]);
-
-console.log(fruits);
