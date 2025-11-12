@@ -1,14 +1,19 @@
 let buttons = document.querySelectorAll(".button");
 let input = document.querySelector(".screen");
 
-let resultShown = false;
+input.value = 0;
+let resultShown = true;
 
 // Click to buttons with the mouse
 
-buttons.forEach(function (butt) {
-  butt.addEventListener("click", function () {
-    if (!butt.classList.contains("button-equal")) {
-      let t = butt.getAttribute("data-text");
+buttons.forEach(function (btn) {
+  btn.addEventListener("click", function () {
+    if (
+      !["button-equal", "button-delete", "button-AC"].some((cls) =>
+        btn.classList.contains(cls)
+      )
+    ) {
+      let t = btn.getAttribute("data-text");
 
       if (resultShown) {
         // Clean input if just was shown a result and is not a symbol
@@ -21,6 +26,19 @@ buttons.forEach(function (butt) {
       if (t) input.value += t;
     }
   });
+});
+
+// del and AC buttons
+
+document.querySelector(".button-delete").addEventListener("click", function () {
+  let value = input.value.split("");
+  value.pop();
+  input.value = value.join("");
+});
+
+document.querySelector(".button-AC").addEventListener("click", function () {
+  input.value = 0;
+  resultShown = true;
 });
 
 // Resolve operation with = button
