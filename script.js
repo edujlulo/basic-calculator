@@ -16,8 +16,8 @@ buttons.forEach(function (btn) {
       let t = btn.getAttribute("data-text");
 
       if (resultShown) {
-        // Clean input if just was shown a result and is not a symbol
-        if (!isNaN(t) || t === "." || t === "(" || t === ")") {
+        if (!isNaN(t) || [".", "(", ")", "-"].includes(t)) {
+          // Clean input if just was shown a result and is not a symbol
           input.value = "";
         }
         resultShown = false;
@@ -31,9 +31,20 @@ buttons.forEach(function (btn) {
 // del and AC buttons
 
 document.querySelector(".button-delete").addEventListener("click", function () {
+  if (resultShown) {
+    input.value = 0;
+  }
+
+  if (input.value === "Error") input.value = 0;
+
   let value = input.value.split("");
   value.pop();
   input.value = value.join("");
+
+  if (input.value === "") {
+    input.value = 0;
+    resultShown = true;
+  }
 });
 
 document.querySelector(".button-AC").addEventListener("click", function () {
@@ -98,5 +109,7 @@ function calculation(e) {
     }
   } else if (e.key === "Enter") {
     document.querySelector(".button-equal").click();
+  } else if (e.key === "Backspace") {
+    document.querySelector(".button-delete").click();
   }
 }
