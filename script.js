@@ -115,18 +115,3 @@ function calculation(e) {
 }
 
 // ==========================================================
-
-function sleep(ms) {
-  return new Promise((resolve) => setTimeout(resolve, ms));
-}
-
-async function temporizador(seg) {
-  for (let i = seg; i >= 0; i--) {
-    console.log(i);
-    await sleep(1000);
-  }
-
-  console.log("Finaaaaaaaaaaal");
-}
-
-temporizador(4);
