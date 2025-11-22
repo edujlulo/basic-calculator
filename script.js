@@ -115,3 +115,17 @@ function calculation(e) {
 }
 
 // ==========================================================
+
+function contarVocales(str) {
+  let resultado = 0;
+
+  str.split("").forEach((l) => {
+    if ("AEIOUaeiou".includes(l)) {
+      resultado++;
+    }
+  });
+
+  return resultado;
+}
+
+console.log(contarVocales("hola mundooereeeeeee"));
