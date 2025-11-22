@@ -115,3 +115,20 @@ function calculation(e) {
 }
 
 // ==========================================================
+
+function contador() {
+  let contador = 0;
+  return function () {
+    return ++contador;
+  };
+}
+
+const contador1 = contador();
+
+console.log(contador1());
+console.log(contador1());
+console.log(contador1());
+console.log(contador1());
+console.log(contador1());
+console.log(contador1());
+console.log(contador1());
